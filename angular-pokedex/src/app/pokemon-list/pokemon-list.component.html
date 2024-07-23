@@ -1,3 +1,21 @@
-<div class="pokemin-list">
-<app-pokemon-card *ngFor="let pokemon of pokemonService.pokemons; index as i" [pokemon]="pokemon.name" [numero]="i + 1"></app-pokemon-card>
+<div class="pokemon-list">
+  <app-pokemon-card
+    *ngFor="let pokemon of paginatedPokemons; index as i"
+    [pokemon]="pokemon"
+    [numero]="i + 1 + (currentPage * pageSize)"
+  >
+  </app-pokemon-card>
+</div>
+
+<div class="paginatina-controle">
+  <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 0">
+    <
+  </button>
+  <span>Página {{ currentPage + 1 }} of {{ totalPages }}</span>
+  <button
+    (click)="goToPage(currentPage + 1)"
+    [disabled]="currentPage >= totalPages - 1"
+  >
+    >
+  </button>
 </div>

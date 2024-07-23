@@ -1,4 +1,6 @@
 <div class="pokemon-card">
-  <img [src]="pegarImagemPokemon()"><br>
-  <b>{{pokemon}}</b>
+  <img [src]="pegarImagemPokemon()" alt="{{ pokemon.name }}"><br>
+  <b>{{ pokemon.name }}</b><br>
+  <p>Category: {{ pokemon.category }}</p>
+  <p>Abilities: {{ pokemon.abilities.slice(0, 2).join(', ') }}</p>
 </div>
