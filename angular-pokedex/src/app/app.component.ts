@@ -15,4 +15,9 @@ import { PokemonService } from './services/pokemon.service';
 })
 export class AppComponent {
   title = 'angular-pokedex';
+  mostrarLista= false;
+
+  saberMais(){
+    this.mostrarLista = !this.mostrarLista;
+  }
 }

@@ -1,1 +1,14 @@
-<app-pokemon-list></app-pokemon-list>
+<div class="backgroud-body">
+  <div class="logo">
+  <img src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABeks7WmY2ze14bA1tk-_N4x6xUw5ypMvrgFD2boFe7OBqERCFdNHFJO1SsYJhUCXJaiaMtS4X7k7llApuxSdzSU-FeMjNum_mDqXR7xj0ZVN.png?r=f32" alt="">
+</div>
+
+<div class="pokemon" *ngIf="!mostrarLista">
+  <h1>Tudo sobre <img class="escrita-pokemon" src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABeks7WmY2ze14bA1tk-_N4x6xUw5ypMvrgFD2boFe7OBqERCFdNHFJO1SsYJhUCXJaiaMtS4X7k7llApuxSdzSU-FeMjNum_mDqXR7xj0ZVN.png?r=f32"></h1>
+  <img src="https://t2.tudocdn.net/581852?w=1920" alt="">
+
+  <button class="saber-mais" (click)="saberMais()">SABER MAIS</button>
+</div>
+
+<app-pokemon-list *ngIf="mostrarLista"></app-pokemon-list>
+</div>
