@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PokemonCardComponent } from '../pokemon-card/pokemon-card.component';
 import { CommonModule } from '@angular/common';
+import { PokemonService } from '../services/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -10,5 +11,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './pokemon-list.component.scss'
 })
 export class PokemonListComponent {
-  pokemons = ['Buldasaur', 'Ivysaur', 'Venosaur', 'Charmander'];
+
+  pokemons: { name: string }[] = [];
+
+  constructor(public pokemonService: PokemonService){
+    this.pokemons = pokemonService.pokemons;
+  }
 }
